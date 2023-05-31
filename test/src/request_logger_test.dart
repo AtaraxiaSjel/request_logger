@@ -47,14 +47,11 @@ void main() {
 
     group('middleware', () {
       String testingLogFormatter({
-        Chain? chain,
+        required String message, required Severity severity, required Request request, Chain? chain,
         bool? isError,
         Map<String, dynamic>? labels,
-        required String message,
         Map<String, dynamic>? payload,
-        required Severity severity,
         Frame? stackFrame,
-        required Request request,
       }) =>
           'log';
 
